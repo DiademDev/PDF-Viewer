@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF.js + 2D + Three.js Viewer with Shadow Catcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div id="viewer">
+    <canvas id="pdfCanvas"></canvas>
+    <canvas id="overlay2D"></canvas>
+    <div id="overlay3D"></div>
+
+    <div id="controls">
+      <button id="prev">◀ Prev</button>
+      <button id="next">Next ▶</button>
+      <button id="zoomIn">＋ Zoom In</button>
+      <button id="zoomOut">－ Zoom Out</button>
+    </div>
+
+    <div id="layerToggles">
+      <label style="margin-right: 20px;"><input type="checkbox" id="togglePDF" checked> PDF</label>
+      <label><input type="checkbox" id="toggle2D" checked> 2D</label>
+      <button id="drawToggle" style="margin-right: 20px;">✏️ Draw</button>
+      <label><input type="checkbox" id="toggle3D"> 3D</label>
+      <label><input type="checkbox" id="toggleShadows"> Shadows</label>
+      <label><input type="checkbox" id="toggleRotate" checked> Auto Rotate</label>
+    </div>
+  </div>
+
+  <!-- Main JS (Vite entry) -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
