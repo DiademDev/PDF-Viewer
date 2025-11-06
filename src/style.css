@@ -1,0 +1,76 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  background: #111;
+  color: white;
+  font-family: sans-serif;
+}
+
+#viewer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #222;
+}
+
+#pdfCanvas { 
+  z-index: 1; 
+  position: absolute; 
+  top:0; left:0; 
+}
+
+#overlay3D { 
+  z-index: 2; 
+  position: absolute; 
+  top:0; 
+  left:0; 
+  pointer-events: auto; 
+}
+
+#overlay2D { 
+  z-index: 3; 
+  position: absolute; 
+  top:0; 
+  left:0; 
+  pointer-events: none; 
+}
+
+#controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+#layerToggles {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  background: rgba(0,0,0,0.4);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+button, label {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+button:hover, label:hover {
+  background: rgba(255,255,255,0.2);
+}
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 4px;
+}
